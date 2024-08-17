@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="wrapper">
+    <div class="title-text">
+        <div class="title login" id="loginText">Login Form</div>
+        <div class="title signup" id="signupText">Signup Form</div>
+    </div>
+    <div class="form-container">
+        <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked>
+            <input type="radio" name="slide" id="signup">
+            <label for="login" class="slide login" id="loginBtn" onclick="switchToLogin()">Login</label>
+            <label for="signup" class="slide signup" id="signupBtn" onclick="switchToSignup()">Signup</label>
+            <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner" id="formInner">
+            <form action="#" class="login" id="loginForm">
+                <div class="field">
+                    <input type="text" id="logEmail" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                    <input type="password" id="logPass" placeholder="Password" required>
+                </div>
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" onclick="loginHandler()" value="Login">
+                </div>
+                <div class="signup-link">Not a member? <a href="#" id="signupLink" onclick="switchToSignupLink()">Signup now</a></div>
+                <p style="text-align: center; padding-top: 10px; opacity: 80%; margin-top: 26%;">Developed by Aliyan Khatri</p>
+
+            </form>
+
+            <form action="#" class="signup" id="signupForm">
+
+                <div class="field">
+                    <input type="text" id="signUser" placeholder="Full Name" required>
+                </div>
+                <div class="field">
+                    <input type="text" id="signEmail" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                    <input type="password" id="signPass" placeholder="Password" required>
+                </div>
+                <div class="field">
+                    <input type="password" id="signConfirmPass" placeholder="Confirm password" required>
+                </div>
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" onclick="signupHandler()" value="Signup">
+                </div>
+                <p style="text-align: center; padding-top: 10px; opacity: 80%;">Developed by Aliyan Khatri</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="module" src="../JAVASCRIPT/auth.js"></script>
+
+</html>
